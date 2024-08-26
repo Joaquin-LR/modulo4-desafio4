@@ -1,7 +1,7 @@
 <h1>Desafío 4: Consumo de APIs con React</h1>
 <p>Módulo 4: React (68) > Hito 4 - Pizzería Mamma Mía</p>
 
-<h2>Instrucciones para la visualización completa:</h2>
+<h2>Instrucciones para la visualización completa</h2>
 
 <ol>
  <li><p>Descargar y extraer ZIP.</p></li>
