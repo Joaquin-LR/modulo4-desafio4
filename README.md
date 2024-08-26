@@ -1,7 +1,7 @@
 <h1>Desafío 4: Consumo de APIs con React</h1>
 <p>Módulo 4: React (68) > Hito 4 - Pizzería Mamma Mía</p>
 
-<h2>Importante 26/08/2024</h2>
+<h2>Actualización 26/08/2024</h2>
  <li><p>Por alguna extraña razón, los botones de "-" y "+" me funcionaban ayer, cuando subí esto a github, y ahora no. Sé que eso no es parte de la evaluación, pero quiero arreglarlo lo antes posible.</p></li>
 
 
@@ -20,7 +20,7 @@
 <h3>Notas</h3>
 <ul>
  <li><p>En este desafío necesitaba continuar con la linealidad del desarrollo (me gana el perfeccionismo 😅), por lo que tuve que pedirle algunas ayuditas a san ChatGPT para hacer compatible lo que llevaba con lo que se pedía ahora. Espero sea realmente lo solicitado, me guié con un link deploy enviado por un tutor en Slack.</p></li>
-  <li><p>Lo anterior quiere decir que todo lo que funcionaba en los anteriores desafíos, se suma lo que también funciona ahora.</p></li>
+  <li><p>Lo anterior quiere decir que todo lo que funcionaba en los anteriores desafíos, se suma lo que también funciona ahora. (Actualización 26/08/24: Debo arreglar el problema)</p></li>
   <li><p>Tenga una excelente semana, y mucha fuerza para revisar cada desafío.</p></li>
 </ul>
 
