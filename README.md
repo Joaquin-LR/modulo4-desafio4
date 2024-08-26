@@ -2,7 +2,9 @@
 <p>Módulo 4: React (68) > Hito 4 - Pizzería Mamma Mía</p>
 
 <h2>Actualización 26/08/2024</h2>
- <li><p>Por alguna extraña razón, los botones de "-" y "+" me funcionaban ayer, cuando subí esto a github, y ahora no. Sé que eso no es parte de la evaluación, pero quiero arreglarlo lo antes posible.</p></li>
+<ul>
+<li><p>Por alguna razón, los botones de "-" y "+" me funcionaban ayer, cuando subí esto a github, y ahora no. Sé que eso no es parte de la evaluación, pero quiero arreglarlo lo antes posible.</p></li>
+</ul>
 
 
 <h2>Instrucciones para la visualización completa</h2>
