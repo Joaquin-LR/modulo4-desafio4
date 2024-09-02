@@ -18,7 +18,7 @@
 }
 
 .custom-navbar button {
-  margin-left: 10px;
+  padding-left: 10px;
 }
 
 /* ENCABEZADO */
@@ -68,7 +68,7 @@
 .card-container , .card-container-2 {
   display: flex;
   flex-wrap: wrap; /* Permite que las tarjetas se muevan a la siguiente línea si no caben en una fila */
-  gap: 1rem; /* Ajusta el espacio entre las tarjetas si es necesario */
+  gap: 2rem; /* Ajusta el espacio entre las tarjetas si es necesario */
   padding-bottom: 70px;
   margin: 25px 0 25px 0;
   justify-content: center;
@@ -123,11 +123,15 @@
 
 /* DE AQUÍ EN ADELANTE PARTE LO DEL HITO 2: RegisterPage Y LoginPage:*/
 
-.register-container,.login-container{
+.register-container, .login-container, .profile-container, .not-found-container{
   display: flex;
   align-items: center;
   justify-content: center;
   transform: translate(0, 200px);
+}
+
+.profile-container, .not-found-container {
+  flex-direction: column;
 }
 
 .formulario {
@@ -187,4 +191,9 @@ li {
 
 .ver-mas {
   transform: translate(0, -10px);
+}
+
+.nav-link:hover{
+  filter: drop-shadow(0px 0px 0.5px rgb(255, 255, 255)) contrast(120%);
+  font-size: 105%;
 }

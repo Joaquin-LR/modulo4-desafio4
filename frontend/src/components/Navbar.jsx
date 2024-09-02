@@ -1,38 +1,48 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-function NavBar(props) {
-  const formattedTotal = props.total.toLocaleString('es-CL');
+const Navbar = ({ isLoggedIn, setIsLoggedIn, navtitle, totalLabel, total }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    navigate('/');
+  };
 
   return (
-    <Navbar expand="lg" variant="dark" className="bg-dark custom-navbar">
-      <Container fluid>
-        <Navbar.Brand href="#">{props.navtitle}</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
-            <Button variant="outline-light" onClick={() => props.setCurrentView('home')}>
-              {props.home}
-            </Button>
-            <Button variant="outline-light" onClick={() => props.setCurrentView(props.isLoggedIn ? 'profile' : 'login')}>
-              {props.isLoggedIn ? props.profile : props.login}
-            </Button>
-            <Button variant="outline-light" onClick={() => props.setCurrentView(props.isLoggedIn ? 'logout' : 'register')}>
-              {props.isLoggedIn ? props.logout : props.register}
-            </Button>
-          </Nav>
-          <Button 
-            variant="outline-info" 
-            onClick={() => props.setCurrentView('cart')}
-          >
-            {props.totalLabel}{formattedTotal}
-          </Button>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav className='navbar navbar-expand-lg navbar-dark bg-dark px-3'>
+      <span className='navbar-brand text-white'>{navtitle}</span>
+      <div className='collapse navbar-collapse'>
+        <ul className='navbar-nav mr-auto'>
+          <li className='nav-item'>
+            <Link className='nav-link text-white px-3' to="/">🍕 Home</Link>
+          </li>
+          {isLoggedIn ? (
+            <>
+              <li className='nav-item'>
+                <Link className='nav-link text-white px-3' to="/profile">🤤 Profile</Link>
+              </li>
+              <li className='nav-item'>
+                <button className='nav-link btn btn-link text-white px-3' onClick={handleLogout}>🏃‍♂️‍➡️ Logout</button>
+              </li>
+            </>
+          ) : (
+            <>
+              <li className='nav-item'>
+                <Link className='nav-link text-white px-3' to="/login">🔒 Login</Link>
+              </li>
+              <li className='nav-item'>
+                <Link className='nav-link text-white px-3' to="/register">🔒 Register</Link>
+              </li>
+            </>
+          )}
+        </ul>
+        <button className='btn btn-outline-success my-2 my-sm-0 ms-auto' onClick={() => navigate('/cart')}>
+          {totalLabel} {total.toLocaleString('es-CL', { style: 'currency', currency: 'CLP' })}
+        </button>
+      </div>
+    </nav>
   );
-}
+};
 
-export default NavBar;
+export default Navbar;
